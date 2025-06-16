@@ -43,8 +43,12 @@ RUN mkdir -p /workspace
 VOLUME /workspace
 
 # 5. Copy startup script
-COPY start-eclipse-vnc.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/start-eclipse-vnc.sh
+# copy the script first
+COPY start-eclipse-vnc.sh /usr/local/bin/start-eclipse-vnc.sh
+
+# make executable *and* convert CRLF → LF
+RUN chmod +x /usr/local/bin/start-eclipse-vnc.sh \
+ && sed -i 's/\r$//' /usr/local/bin/start-eclipse-vnc.sh
 
 EXPOSE 5901 6080
 CMD ["/usr/local/bin/start-eclipse-vnc.sh"]

@@ -4,6 +4,21 @@
 Build once, run anywhere, develop KNIME plug-ins or regular workflows right from your browser.
 
 ---
+
+## 📋 Prerequisites
+
+| Tool / Capability | Minimum version | Notes |
+|-------------------|-----------------|-------|
+| **Docker Desktop** | 4.30 + (Windows 11/macOS) <br> _or_ Docker Engine 20.10 + (Linux) | Enable WSL 2 / Hyper‑V on Windows; enable “Use the WSL 2 based engine” in Docker Desktop settings. |
+| **CPU virtualization** | VT‑x / AMD‑V enabled | Required for WSL 2 / Hyper‑V (Windows) and for most desktop hypervisors. |
+| **RAM** | ≥ 4 GB free | KNIME alone likes memory; give the container 4–6 GB if you can. |
+| **Browser** | Any modern HTML5 browser (Chrome, Edge, Firefox, Safari) | Needed only for the **noVNC** web client on port 6080. |
+| *(optional)* VNC viewer | TigerVNC, RealVNC, TightVNC … | Connect to `localhost:5900` for native performance and clipboard sync. |
+
+> 💡 **Windows users:** PowerShell treats the back‑tick (`` ` ``) as a line‑continuation _only_ when it is the very last character on a line—no trailing spaces!  Copy‑paste the examples exactly.
+
+
+---
 ## ⚡ Quick start (Windows 11 shown; macOS/Linux is the same minus PowerShell quirks)
 ### 1. Clone this repo
 ```powershell

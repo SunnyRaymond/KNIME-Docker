@@ -5,31 +5,33 @@ Build once, run anywhere, develop KNIME plug-ins or regular workflows right from
 
 ---
 ## ⚡ Quick start (Windows 11 shown; macOS/Linux is the same minus PowerShell quirks)
-
+### 1. Clone this repo
 ```powershell
-# 1. Clone this repo
 git clone https://github.com/<you>/knime-sdk-setup.git
 cd knime-sdk-setup
-
-# 2. Build the image (takes ~5–7 min the first time)
+```
+### 2. Build the image (takes ~5–7 min the first time)
+```powershell
 docker build -t knime-sdk .
+```
 
-# 3. Run it (back-tick MUST be the last char on a line in PowerShell)
+### 3. Run the container
+```powershell
 docker run -d --name knime `
-  -p 6080:6080 `            # noVNC in browser
-  -p 5900:5900 `            # raw VNC (optional)
-  -v "$env:USERPROFILE\knime-ws:/workspace" ` # persistent workspace
+  -p 6080:6080 `           
+  -p 5900:5900 ` 
+  -v "$env:USERPROFILE\knime-ws:/workspace" `
   knime-sdk
 ````
 
-### Open the desktop
+### 4. Open the desktop
 
 | Method          | URL / host                                                       | Notes                                             |
 | --------------- | ---------------------------------------------------------------- | ------------------------------------------------- |
 | Browser (noVNC) | [http://localhost:6080/vnc.html](http://localhost:6080/vnc.html) | Click **Connect** → Fluxbox panel + KNIME splash. |
 | VNC viewer      | `localhost:5900`                                                 | No password set by default.                       |
 
-Stop & remove the container:
+### Optional: Stop & remove the container:
 
 ```powershell
 docker rm -f knime

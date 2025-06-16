@@ -1,4 +1,3 @@
-````markdown
 # KNIME-SDK-in-a-Box 🐳
 
 **One Docker image = full KNIME Analytics Platform 5.4 + Eclipse RCP SDK + a lightweight remote desktop (Fluxbox + VNC + noVNC).**  
@@ -122,4 +121,4 @@ PRs & issues welcome!  Typical help wanted:
 **Happy data science & plug-in hacking!** 🚀
 
 ```
-```
+

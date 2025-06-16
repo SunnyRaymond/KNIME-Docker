@@ -18,8 +18,7 @@ docker build -t knime-sdk .
 ### 3. Run the container
 ```powershell
 docker run -d --name knime `
-  -p 6080:6080 `           
-  -p 5900:5900 ` 
+  -p 6080:6080 -p 5900:5900 `
   -v "$env:USERPROFILE\knime-ws:/workspace" `
   knime-sdk
 ````

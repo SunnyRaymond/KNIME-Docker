@@ -3,7 +3,7 @@
 **One Docker image = full KNIME Analytics Platform 5.4 + Eclipse RCP SDK + a lightweight remote desktop (Fluxbox + VNC + noVNC).**  
 Build once, run anywhere, develop KNIME plug-ins or regular workflows right from your browser.
 
-
+---
 ## ⚡ Quick start (Windows 11 shown; macOS/Linux is the same minus PowerShell quirks)
 
 ```powershell

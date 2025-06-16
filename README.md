@@ -7,8 +7,8 @@ Build once, run anywhere, develop KNIME plug-ins or regular workflows right from
 ## ⚡ Quick start (Windows 11 shown; macOS/Linux is the same minus PowerShell quirks)
 ### 1. Clone this repo
 ```powershell
-git clone https://github.com/<you>/knime-sdk-setup.git
-cd knime-sdk-setup
+git clone https://github.com/SunnyRaymond/KNIME-Docker.git
+cd KNIME-Docker
 ```
 ### 2. Build the image (takes ~5–7 min the first time)
 ```powershell
